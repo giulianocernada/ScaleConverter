@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Conversor de escala
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1 id="title">Conversor de escala</h1>
+	<div id="main">
+  		<form id="survey-form">
+  			<div class="row">
+    			<div class="special-label">
+    				<label id="name-label">Escala - 1 : </label>
+    			</div>
+    			<div class="special-column">
+    				<input class="special-input" type="number" min="0" max="999" required>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="left-column">
+    				<label>PLANO</label>
+    			</div>
+    			<div class="right-column">
+    				<label>REALIDAD</label>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="left-column">
+    				<input class="input-field" type="number" min="0" max="999">
+    				<p class="unit">cm</p>
+    			</div>
+    			<div class="right-column">
+    				<input class="input-field" type="number" min="0" max="999">
+    				<select id="selector">
+                        <option disabled selected value></option>
+                        <option value="m">m</option>
+                        <option value="cm">cm</option>
+                    </select>
+    			</div>
+    		</div>
+    		<div class="row-buttons">
+    			<input type="submit" id="submit" value="Calcular">
+    			<input type="submit" id="submit" value="Borrar">
+    			<input type="submit" id="submit" value="Resetear">
+    		</div>
+
+<!-- BUTTON --> 
+			
+		</form>
+	</div>
+</body>
+</html>
