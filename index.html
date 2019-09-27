@@ -16,7 +16,7 @@
     				<label id="name-label">Escala - 1 : </label>
     			</div>
     			<div class="special-column">
-    				<input class="special-input" type="number" min="0" max="999" required>
+    				<input id='scalenumber' class="special-input" type="number" min="0" max="999" required>
     			</div>
     		</div>
     		<div class="row">
@@ -29,11 +29,11 @@
     		</div>
     		<div class="row">
     			<div class="left-column">
-    				<input class="input-field" type="number" min="0" max="999">
+    				<input id='result-number' class="input-field" disabled type="number">
     				<p class="unit">cm</p>
     			</div>
     			<div class="right-column">
-    				<input class="input-field" type="number" min="0" max="999">
+    				<input id='measure-number' class="input-field" type="number" min="0" max="999">
     				<select id="selector">
                         <option disabled selected value></option>
                         <option value="m">m</option>
@@ -42,14 +42,26 @@
     			</div>
     		</div>
     		<div class="row-buttons">
-    			<input type="submit" id="submit" value="Calcular">
-    			<input type="submit" id="submit" value="Borrar">
-    			<input type="submit" id="submit" value="Resetear">
+    			<input type='button' id='calc' value="Calcular" onclick="Converted()">
+    			<input type="submit" value="Borrar">
+    			<input type="submit" value="Resetear">
     		</div>
+            <p id="demo"></p>
 
 <!-- BUTTON --> 
 			
 		</form>
 	</div>
+    <script>
+        let scale = document.getElementById('scalenumber').value;
+let result = document.getElementById('result-number');
+let measure = document.getElementById('measure-number').value;
+let unit = document.getElementById('selector');
+let calculate = document.getElementById('calc');
+
+function Converted() {
+    console.log(scale);
+}
+    </script>
 </body>
 </html>
