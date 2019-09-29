@@ -10,7 +10,7 @@
 <body>
 	<h1 id="title">Conversor de escala</h1>
 	<div id="main">
-  		<form id="survey-form">
+  		<form id="my-form">
   			<div class="row">
     			<div class="special-label">
     				<label id="name-label">Escala - 1 : </label>
@@ -29,29 +29,47 @@
     		</div>
     		<div class="row">
     			<div class="left-column">
-    				<input id='result-number' class="input-field" disabled type="number">
+    				<input id='result-number' class="input-field" readonly type="number">
     				<p class="unit">cm</p>
     			</div>
     			<div class="right-column">
-    				<input id='measure-number' class="input-field" type="number" min="0" max="999">
-    				<select id="selector">
+    				<input id='measure-number' class="input-field" type="number" min="0" max="999" required placeholder="Ingrese medida a convertir">
+    				<select id="selector" required>
                         <option disabled selected value></option>
                         <option value="m">m</option>
                         <option value="cm">cm</option>
                     </select>
     			</div>
     		</div>
+            <div class="row">
+                <div class="left-column">
+                    <label>Redondeo</label>
+                </div>
+                <div class="right-column">
+                    <select id='redondeo'>
+                        <option value="1">1</option>
+                        <option selected='selected' value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option> 
+                    </select>
+                </div>
+            </div>
     		<div class="row-buttons">
     			<input type='button' id='calc' value="Calcular" onclick="Converted()">
-    			<input type="submit" value="Borrar">
-    			<input type="submit" value="Resetear">
+    			<input type="submit" value="Reset" onclick="Reset()">
     		</div>
-            <p id="demo"></p>
+            
 
 <!-- BUTTON --> 
 			
 		</form>
 	</div>
+    <footer id="footer">
+                <div id="footer-content">
+                    <p class="footer-text">Giuliano Cernada - 2019</p>
+                </div>
+            </footer>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
