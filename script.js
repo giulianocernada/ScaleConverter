@@ -17,10 +17,3 @@ function Reset() {
 	document.getElementById('my-form').reset();
 }
 
-// calc.addEventListener('click', Converted)
-
-//1 en 100
-//1m --- 1cm
-
-//1 en 50
-//1m --- 2cm
